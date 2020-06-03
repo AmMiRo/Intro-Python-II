@@ -44,15 +44,10 @@ room["secret"].w_to = room["treasure"]
 # Declare items
 items = {
     "sword": Item("sword", "is very sharp"),
-
     "armor": Item("armor", "is form fitting and makes your butt look great"),
-
     "shield": Item("shield", "is pretty heavy"),
-
     "food": Item("food", "is raw"),
-
     "gold": Item("gold", "is shiny"),
-
     "spell book": Item("spell book", "is in a language you don't understand")
 }
 
@@ -89,7 +84,7 @@ while True:
             print("Try: n, s, e, or w to move.\nTry: search to find items.\nTry: inspect, get, drop, or inventory with items.\n")
 
         else:
-            print("\nI don't understand that command.\n")
+            print("I don't understand that command.\n")
 
     elif len(cmd) == 2:
 
@@ -103,6 +98,9 @@ while True:
 
         elif cmd[0] == "drop":
             player.drop_item(item)
+
+        else:
+            print("I don't understand that command.\n")
             
     else:
         print("\nI don't understand that command.\n")
