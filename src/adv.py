@@ -67,14 +67,14 @@ while True:
 
         cmd = cmd[0]
 
-        if cmd == "q":
+        if cmd in ["q", "quit"]:
             print("\ngoodbye\n")
             exit()
 
         elif cmd in ["n", "s", "e", "w"] :
             player.move_self(cmd)
 
-        elif cmd == "search":
+        elif cmd in ["search", "look", "find"]:
             player.current_room.search_room()
 
         elif cmd == "inventory":
@@ -90,13 +90,13 @@ while True:
 
         item = cmd[1]
 
-        if cmd[0] == "get":
+        if cmd[0] in ["get", "grab"]:
             player.get_item(item)
 
         elif cmd[0] == "inspect":
             items[item].inspect_item(player, item)
 
-        elif cmd[0] == "drop":
+        elif cmd[0] in ["drop", "dump"]:
             player.drop_item(item)
 
         else:
