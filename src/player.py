@@ -8,7 +8,7 @@ class Player:
         self.items = items
 
     def move_self(self, direction):
-        target_room = getattr(self.current_room, '{}_to'.format(direction))
+        target_room = getattr(self.current_room, f'{direction}_to')
         if target_room is not None:
             self.current_room = target_room
         else:
